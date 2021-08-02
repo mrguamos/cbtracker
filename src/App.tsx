@@ -6,6 +6,7 @@ import Web3Provider from './context/web3-context';
 import { Box, Container, Toolbar, Typography } from '@material-ui/core';
 import { AppBar } from '@material-ui/core';
 import { CssBaseline } from '@material-ui/core';
+import Link from '@material-ui/core/Link';
 
 function App() {
   return (
@@ -14,6 +15,20 @@ function App() {
       <AppBar position="static">
         <Toolbar>
           <Typography variant="h6">CryptoBlades Tracker</Typography>
+        </Toolbar>
+      </AppBar>
+      <AppBar position="fixed" style={{ top: 'auto', bottom: 0 }}>
+        <Toolbar style={{ textAlign: 'center' }}>
+          <Typography variant="h6" style={{ flexGrow: 1 }}>
+            Powered by
+            <Link
+              href="https://github.com/mrguamos/cbtracker"
+              color="textSecondary"
+            >
+              {' '}
+              mrguamos
+            </Link>
+          </Typography>
         </Toolbar>
       </AppBar>
 
