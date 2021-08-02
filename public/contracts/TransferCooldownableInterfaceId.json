@@ -1,0 +1,1207 @@
+{
+  "contractName": "TransferCooldownableInterfaceId",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.5+commit.f956cc89\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/D/dev/cryptoblades/contracts/interfaces/ITransferCooldownable.sol\":\"TransferCooldownableInterfaceId\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/D/dev/cryptoblades/contracts/interfaces/ITransferCooldownable.sol\":{\"keccak256\":\"0xeef98c630b40272746bec39ad7b137e9d766eb8d34bcdd71bf1efeaef0ce676a\",\"urls\":[\"bzz-raw://765b15f720f6ec179d682a1a0194d07293bed35788cd74e0262c49d3a2e636b1\",\"dweb:/ipfs/QmbBq5DqkGxVYysoSLmfxiU8eWJXRDfqMgvRgvDC8k9dvT\"]}},\"version\":1}",
+  "bytecode": "0x60566023600b82828239805160001a607314601657fe5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea26469706673582212201487f9a196c37203bffe1ab4fbcd1aef0f89c39418c0042c13edbc0cd684891064736f6c63430006050033",
+  "deployedBytecode": "0x73000000000000000000000000000000000000000030146080604052600080fdfea26469706673582212201487f9a196c37203bffe1ab4fbcd1aef0f89c39418c0042c13edbc0cd684891064736f6c63430006050033",
+  "immutableReferences": {},
+  "sourceMap": "430:328:21:-:0;;132:2:-1;166:7;155:9;146:7;137:37;255:7;249:14;246:1;241:23;235:4;232:33;222:2;;269:9;222:2;293:9;290:1;283:20;323:4;314:7;306:22;347:7;338;331:24",
+  "deployedSourceMap": "430:328:21:-:0;;;;;;12:1:-1;9;2:12",
+  "source": "pragma solidity ^0.6.5;\r\n\r\n// ERC165 Interface ID: 0xe62e6974\r\ninterface ITransferCooldownable {\r\n    // Views\r\n    function lastTransferTimestamp(uint256 tokenId) external view returns (uint256);\r\n\r\n    function transferCooldownEnd(uint256 tokenId)\r\n        external\r\n        view\r\n        returns (uint256);\r\n\r\n    function transferCooldownLeft(uint256 tokenId)\r\n        external\r\n        view\r\n        returns (uint256);\r\n}\r\n\r\nlibrary TransferCooldownableInterfaceId {\r\n    function interfaceId() internal pure returns (bytes4) {\r\n        return\r\n            ITransferCooldownable.lastTransferTimestamp.selector ^\r\n            ITransferCooldownable.transferCooldownEnd.selector ^\r\n            ITransferCooldownable.transferCooldownLeft.selector;\r\n    }\r\n}\r\n",
+  "sourcePath": "D:\\dev\\cryptoblades\\contracts\\interfaces\\ITransferCooldownable.sol",
+  "ast": {
+    "absolutePath": "/D/dev/cryptoblades/contracts/interfaces/ITransferCooldownable.sol",
+    "exportedSymbols": {
+      "ITransferCooldownable": [
+        7424
+      ],
+      "TransferCooldownableInterfaceId": [
+        7443
+      ]
+    },
+    "id": 7444,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 7402,
+        "literals": [
+          "solidity",
+          "^",
+          "0.6",
+          ".5"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:21"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 7424,
+        "linearizedBaseContracts": [
+          7424
+        ],
+        "name": "ITransferCooldownable",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "functionSelector": "9d7c828b",
+            "id": 7409,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "lastTransferTimestamp",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 7405,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7404,
+                  "name": "tokenId",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 7409,
+                  "src": "147:15:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 7403,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "147:7:21",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "146:17:21"
+            },
+            "returnParameters": {
+              "id": 7408,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7407,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 7409,
+                  "src": "187:7:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 7406,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "187:7:21",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "186:9:21"
+            },
+            "scope": 7424,
+            "src": "116:80:21",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "functionSelector": "ff2e65ab",
+            "id": 7416,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "transferCooldownEnd",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 7412,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7411,
+                  "name": "tokenId",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 7416,
+                  "src": "233:15:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 7410,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "233:7:21",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "232:17:21"
+            },
+            "returnParameters": {
+              "id": 7415,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7414,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 7416,
+                  "src": "300:7:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 7413,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "300:7:21",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "299:9:21"
+            },
+            "scope": 7424,
+            "src": "204:105:21",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "functionSelector": "847c8e54",
+            "id": 7423,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "transferCooldownLeft",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 7419,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7418,
+                  "name": "tokenId",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 7423,
+                  "src": "347:15:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 7417,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "347:7:21",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "346:17:21"
+            },
+            "returnParameters": {
+              "id": 7422,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7421,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 7423,
+                  "src": "414:7:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 7420,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "414:7:21",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "413:9:21"
+            },
+            "scope": 7424,
+            "src": "317:106:21",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 7444,
+        "src": "63:363:21"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "library",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 7443,
+        "linearizedBaseContracts": [
+          7443
+        ],
+        "name": "TransferCooldownableInterfaceId",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 7441,
+              "nodeType": "Block",
+              "src": "531:224:21",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_bytes4",
+                      "typeString": "bytes4"
+                    },
+                    "id": 7439,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "commonType": {
+                        "typeIdentifier": "t_bytes4",
+                        "typeString": "bytes4"
+                      },
+                      "id": 7435,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "leftExpression": {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 7429,
+                            "name": "ITransferCooldownable",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 7424,
+                            "src": "562:21:21",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_contract$_ITransferCooldownable_$7424_$",
+                              "typeString": "type(contract ITransferCooldownable)"
+                            }
+                          },
+                          "id": 7430,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "memberName": "lastTransferTimestamp",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 7409,
+                          "src": "562:43:21",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_declaration_view$_t_uint256_$returns$_t_uint256_$",
+                            "typeString": "function ITransferCooldownable.lastTransferTimestamp(uint256) view returns (uint256)"
+                          }
+                        },
+                        "id": 7431,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "memberName": "selector",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "562:52:21",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes4",
+                          "typeString": "bytes4"
+                        }
+                      },
+                      "nodeType": "BinaryOperation",
+                      "operator": "^",
+                      "rightExpression": {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 7432,
+                            "name": "ITransferCooldownable",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 7424,
+                            "src": "630:21:21",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_contract$_ITransferCooldownable_$7424_$",
+                              "typeString": "type(contract ITransferCooldownable)"
+                            }
+                          },
+                          "id": 7433,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "memberName": "transferCooldownEnd",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 7416,
+                          "src": "630:41:21",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_declaration_view$_t_uint256_$returns$_t_uint256_$",
+                            "typeString": "function ITransferCooldownable.transferCooldownEnd(uint256) view returns (uint256)"
+                          }
+                        },
+                        "id": 7434,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "memberName": "selector",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "630:50:21",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes4",
+                          "typeString": "bytes4"
+                        }
+                      },
+                      "src": "562:118:21",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes4",
+                        "typeString": "bytes4"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "^",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 7436,
+                          "name": "ITransferCooldownable",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 7424,
+                          "src": "696:21:21",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_contract$_ITransferCooldownable_$7424_$",
+                            "typeString": "type(contract ITransferCooldownable)"
+                          }
+                        },
+                        "id": 7437,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "memberName": "transferCooldownLeft",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 7423,
+                        "src": "696:42:21",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_declaration_view$_t_uint256_$returns$_t_uint256_$",
+                          "typeString": "function ITransferCooldownable.transferCooldownLeft(uint256) view returns (uint256)"
+                        }
+                      },
+                      "id": 7438,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "memberName": "selector",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "696:51:21",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes4",
+                        "typeString": "bytes4"
+                      }
+                    },
+                    "src": "562:185:21",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes4",
+                      "typeString": "bytes4"
+                    }
+                  },
+                  "functionReturnParameters": 7428,
+                  "id": 7440,
+                  "nodeType": "Return",
+                  "src": "542:205:21"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 7442,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "interfaceId",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 7425,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "497:2:21"
+            },
+            "returnParameters": {
+              "id": 7428,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7427,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 7442,
+                  "src": "523:6:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes4",
+                    "typeString": "bytes4"
+                  },
+                  "typeName": {
+                    "id": 7426,
+                    "name": "bytes4",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "523:6:21",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes4",
+                      "typeString": "bytes4"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "522:8:21"
+            },
+            "scope": 7443,
+            "src": "477:278:21",
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 7444,
+        "src": "430:328:21"
+      }
+    ],
+    "src": "0:760:21"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/D/dev/cryptoblades/contracts/interfaces/ITransferCooldownable.sol",
+      "exportedSymbols": {
+        "ITransferCooldownable": [
+          7424
+        ],
+        "TransferCooldownableInterfaceId": [
+          7443
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.6",
+            ".5"
+          ]
+        },
+        "id": 7402,
+        "name": "PragmaDirective",
+        "src": "0:23:21"
+      },
+      {
+        "attributes": {
+          "abstract": false,
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "interface",
+          "documentation": null,
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            7424
+          ],
+          "name": "ITransferCooldownable",
+          "scope": 7444
+        },
+        "children": [
+          {
+            "attributes": {
+              "body": null,
+              "documentation": null,
+              "functionSelector": "9d7c828b",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "lastTransferTimestamp",
+              "overrides": null,
+              "scope": 7424,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "tokenId",
+                      "overrides": null,
+                      "scope": 7409,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 7403,
+                        "name": "ElementaryTypeName",
+                        "src": "147:7:21"
+                      }
+                    ],
+                    "id": 7404,
+                    "name": "VariableDeclaration",
+                    "src": "147:15:21"
+                  }
+                ],
+                "id": 7405,
+                "name": "ParameterList",
+                "src": "146:17:21"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "overrides": null,
+                      "scope": 7409,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 7406,
+                        "name": "ElementaryTypeName",
+                        "src": "187:7:21"
+                      }
+                    ],
+                    "id": 7407,
+                    "name": "VariableDeclaration",
+                    "src": "187:7:21"
+                  }
+                ],
+                "id": 7408,
+                "name": "ParameterList",
+                "src": "186:9:21"
+              }
+            ],
+            "id": 7409,
+            "name": "FunctionDefinition",
+            "src": "116:80:21"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "documentation": null,
+              "functionSelector": "ff2e65ab",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "transferCooldownEnd",
+              "overrides": null,
+              "scope": 7424,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "tokenId",
+                      "overrides": null,
+                      "scope": 7416,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 7410,
+                        "name": "ElementaryTypeName",
+                        "src": "233:7:21"
+                      }
+                    ],
+                    "id": 7411,
+                    "name": "VariableDeclaration",
+                    "src": "233:15:21"
+                  }
+                ],
+                "id": 7412,
+                "name": "ParameterList",
+                "src": "232:17:21"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "overrides": null,
+                      "scope": 7416,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 7413,
+                        "name": "ElementaryTypeName",
+                        "src": "300:7:21"
+                      }
+                    ],
+                    "id": 7414,
+                    "name": "VariableDeclaration",
+                    "src": "300:7:21"
+                  }
+                ],
+                "id": 7415,
+                "name": "ParameterList",
+                "src": "299:9:21"
+              }
+            ],
+            "id": 7416,
+            "name": "FunctionDefinition",
+            "src": "204:105:21"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "documentation": null,
+              "functionSelector": "847c8e54",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "transferCooldownLeft",
+              "overrides": null,
+              "scope": 7424,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "tokenId",
+                      "overrides": null,
+                      "scope": 7423,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 7417,
+                        "name": "ElementaryTypeName",
+                        "src": "347:7:21"
+                      }
+                    ],
+                    "id": 7418,
+                    "name": "VariableDeclaration",
+                    "src": "347:15:21"
+                  }
+                ],
+                "id": 7419,
+                "name": "ParameterList",
+                "src": "346:17:21"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "overrides": null,
+                      "scope": 7423,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 7420,
+                        "name": "ElementaryTypeName",
+                        "src": "414:7:21"
+                      }
+                    ],
+                    "id": 7421,
+                    "name": "VariableDeclaration",
+                    "src": "414:7:21"
+                  }
+                ],
+                "id": 7422,
+                "name": "ParameterList",
+                "src": "413:9:21"
+              }
+            ],
+            "id": 7423,
+            "name": "FunctionDefinition",
+            "src": "317:106:21"
+          }
+        ],
+        "id": 7424,
+        "name": "ContractDefinition",
+        "src": "63:363:21"
+      },
+      {
+        "attributes": {
+          "abstract": false,
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "library",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            7443
+          ],
+          "name": "TransferCooldownableInterfaceId",
+          "scope": 7444
+        },
+        "children": [
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "interfaceId",
+              "overrides": null,
+              "scope": 7443,
+              "stateMutability": "pure",
+              "virtual": false,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 7425,
+                "name": "ParameterList",
+                "src": "497:2:21"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "overrides": null,
+                      "scope": 7442,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bytes4",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes4",
+                          "type": "bytes4"
+                        },
+                        "id": 7426,
+                        "name": "ElementaryTypeName",
+                        "src": "523:6:21"
+                      }
+                    ],
+                    "id": 7427,
+                    "name": "VariableDeclaration",
+                    "src": "523:6:21"
+                  }
+                ],
+                "id": 7428,
+                "name": "ParameterList",
+                "src": "522:8:21"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 7428
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "commonType": {
+                            "typeIdentifier": "t_bytes4",
+                            "typeString": "bytes4"
+                          },
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "operator": "^",
+                          "type": "bytes4"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "commonType": {
+                                "typeIdentifier": "t_bytes4",
+                                "typeString": "bytes4"
+                              },
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "operator": "^",
+                              "type": "bytes4"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "lValueRequested": false,
+                                  "member_name": "selector",
+                                  "referencedDeclaration": null,
+                                  "type": "bytes4"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": true,
+                                      "lValueRequested": false,
+                                      "member_name": "lastTransferTimestamp",
+                                      "referencedDeclaration": 7409,
+                                      "type": "function ITransferCooldownable.lastTransferTimestamp(uint256) view returns (uint256)"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 7424,
+                                          "type": "type(contract ITransferCooldownable)",
+                                          "value": "ITransferCooldownable"
+                                        },
+                                        "id": 7429,
+                                        "name": "Identifier",
+                                        "src": "562:21:21"
+                                      }
+                                    ],
+                                    "id": 7430,
+                                    "name": "MemberAccess",
+                                    "src": "562:43:21"
+                                  }
+                                ],
+                                "id": 7431,
+                                "name": "MemberAccess",
+                                "src": "562:52:21"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "lValueRequested": false,
+                                  "member_name": "selector",
+                                  "referencedDeclaration": null,
+                                  "type": "bytes4"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": true,
+                                      "lValueRequested": false,
+                                      "member_name": "transferCooldownEnd",
+                                      "referencedDeclaration": 7416,
+                                      "type": "function ITransferCooldownable.transferCooldownEnd(uint256) view returns (uint256)"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 7424,
+                                          "type": "type(contract ITransferCooldownable)",
+                                          "value": "ITransferCooldownable"
+                                        },
+                                        "id": 7432,
+                                        "name": "Identifier",
+                                        "src": "630:21:21"
+                                      }
+                                    ],
+                                    "id": 7433,
+                                    "name": "MemberAccess",
+                                    "src": "630:41:21"
+                                  }
+                                ],
+                                "id": 7434,
+                                "name": "MemberAccess",
+                                "src": "630:50:21"
+                              }
+                            ],
+                            "id": 7435,
+                            "name": "BinaryOperation",
+                            "src": "562:118:21"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "member_name": "selector",
+                              "referencedDeclaration": null,
+                              "type": "bytes4"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "lValueRequested": false,
+                                  "member_name": "transferCooldownLeft",
+                                  "referencedDeclaration": 7423,
+                                  "type": "function ITransferCooldownable.transferCooldownLeft(uint256) view returns (uint256)"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 7424,
+                                      "type": "type(contract ITransferCooldownable)",
+                                      "value": "ITransferCooldownable"
+                                    },
+                                    "id": 7436,
+                                    "name": "Identifier",
+                                    "src": "696:21:21"
+                                  }
+                                ],
+                                "id": 7437,
+                                "name": "MemberAccess",
+                                "src": "696:42:21"
+                              }
+                            ],
+                            "id": 7438,
+                            "name": "MemberAccess",
+                            "src": "696:51:21"
+                          }
+                        ],
+                        "id": 7439,
+                        "name": "BinaryOperation",
+                        "src": "562:185:21"
+                      }
+                    ],
+                    "id": 7440,
+                    "name": "Return",
+                    "src": "542:205:21"
+                  }
+                ],
+                "id": 7441,
+                "name": "Block",
+                "src": "531:224:21"
+              }
+            ],
+            "id": 7442,
+            "name": "FunctionDefinition",
+            "src": "477:278:21"
+          }
+        ],
+        "id": 7443,
+        "name": "ContractDefinition",
+        "src": "430:328:21"
+      }
+    ],
+    "id": 7444,
+    "name": "SourceUnit",
+    "src": "0:760:21"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.5+commit.f956cc89.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.4",
+  "updatedAt": "2021-08-02T10:35:02.378Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
