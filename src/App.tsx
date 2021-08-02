@@ -5,16 +5,18 @@ import Home from './views/Home';
 import Web3Provider from './context/web3-context';
 import { Box, Container, Toolbar, Typography } from '@material-ui/core';
 import { AppBar } from '@material-ui/core';
+import { CssBaseline } from '@material-ui/core';
 
 function App() {
   return (
-    <div>
-      <AppBar>
+    <React.Fragment>
+      <CssBaseline />
+      <AppBar position="static">
         <Toolbar>
           <Typography variant="h6">CryptoBlades Tracker</Typography>
         </Toolbar>
       </AppBar>
-      <Container component={Box} fixed m={10}>
+      <Container fixed component={Box} m={10}>
         <Web3Provider>
           <Router>
             <div>
@@ -29,7 +31,7 @@ function App() {
           </Router>
         </Web3Provider>
       </Container>
-    </div>
+    </React.Fragment>
   );
 }
 
