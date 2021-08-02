@@ -18,7 +18,7 @@ function App() {
       </AppBar>
 
       <Container fixed>
-        <Box m={10}>
+        <Box mt={10}>
           <Web3Provider>
             <Router>
               <div>
