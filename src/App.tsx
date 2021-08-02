@@ -16,20 +16,23 @@ function App() {
           <Typography variant="h6">CryptoBlades Tracker</Typography>
         </Toolbar>
       </AppBar>
-      <Container fixed component={Box} m={10}>
-        <Web3Provider>
-          <Router>
-            <div>
-              {/* A <Switch> looks through its children <Route>s and
+
+      <Container fixed>
+        <Box m={10}>
+          <Web3Provider>
+            <Router>
+              <div>
+                {/* A <Switch> looks through its children <Route>s and
           renders the first one that matches the current URL. */}
-              <Switch>
-                <Route path="/">
-                  <Home />
-                </Route>
-              </Switch>
-            </div>
-          </Router>
-        </Web3Provider>
+                <Switch>
+                  <Route path="/">
+                    <Home />
+                  </Route>
+                </Switch>
+              </div>
+            </Router>
+          </Web3Provider>
+        </Box>
       </Container>
     </React.Fragment>
   );
